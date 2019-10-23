@@ -11,8 +11,8 @@
 
     <modules>
         <module>./common</module>
+        <module>./implementation</module>
     	<module>./calculator</module>
-    	<module>./implementation</module>
     </modules>
 
     <build>
