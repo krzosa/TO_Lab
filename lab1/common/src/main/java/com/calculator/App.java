@@ -1,13 +1,5 @@
 package com.calculator;
 
-import java.io.File;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-import java.net.URL;
-import java.net.URLClassLoader;
-
-import static java.lang.System.exit;
-
 public class App
 {
     public static void main( String[] args )
