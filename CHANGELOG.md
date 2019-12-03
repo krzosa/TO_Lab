@@ -1,5 +1,5 @@
 # Changelog
-## Karol Krzosa TO
+### Karol Krzosa TO
 
 All notable changes to this project will be documented in this file.
 
@@ -11,8 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - CHANGELOG file
+- Plugins folder with a plugin
+- A method in Calc that loads a class and then invokes a method of that class
 
-## Changed
+### Changed
 
 - Project file structure
 

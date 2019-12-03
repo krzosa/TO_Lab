@@ -24,7 +24,13 @@
 			<version>1.0</version>
 			<scope>compile</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.calculator</groupId>
+            <artifactId>PluginLoader</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 	
 	<build>
         <plugins>
@@ -48,6 +54,9 @@
             </resource>
             <resource>
                 <directory>../implementation/target/classes/</directory>
+            </resource>
+            <resource>
+                <directory>../PluginLoader/target/classes/</directory>
             </resource>
         </resources>
 
