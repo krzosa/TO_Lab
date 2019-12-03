@@ -1,1 +1,3 @@
-Exporting to jar. Then using that jar as a library. 
+mvn clean install
+
+java -jar common\target\common-1.0.jar
