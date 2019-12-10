@@ -4,3 +4,7 @@ test
 #intelij
 .idea
 *.iml
+#VSCode
+.classpath
+.project
+.settings
