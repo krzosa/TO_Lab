@@ -10,6 +10,7 @@ public class Facade implements IFacade, Cloneable {
     @Override
     public Object clone() throws CloneNotSupportedException
     {
+        calculator = new Calc();    
         return super.clone();
     }
 

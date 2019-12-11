@@ -14,6 +14,7 @@ public class Calc implements ICalc, Cloneable {
 
     public Calc(){
         File file1 = new File("plugins/plugin/target/classes");
+        /* TODO Properties external file with urls */
         try
         {
             //https://www.oracle.com/technical-resources/articles/java/javareflection.html
@@ -23,19 +24,18 @@ public class Calc implements ICalc, Cloneable {
             ClassLoader cl = new URLClassLoader(urls);
             Class cls = cl.loadClass("Plugin");
             Method[] a = cls.getDeclaredMethods();
-            System.out.println(a[0].toString());
 
             Class partypes[] = new Class[2];
             partypes[0] = Double.TYPE;
             partypes[1] = Double.TYPE;
-            meth = cls.getMethod(
-                    "pow", partypes);
+            meth = cls.getMethod("pow", partypes);
             invokeObject = cls.newInstance();
         }
         catch (Exception e)
         {
             System.out.println(e);
             exit(-1);
+            /* TODO note and throw the exceprtion */
         }
     }
 
