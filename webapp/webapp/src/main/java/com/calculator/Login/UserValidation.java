@@ -1,4 +1,4 @@
-package com.calculator.webapp.Login;
+package com.calculator.Login;
 
 import org.springframework.stereotype.Service;
 

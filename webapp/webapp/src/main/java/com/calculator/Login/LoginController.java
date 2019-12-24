@@ -1,4 +1,4 @@
-package com.calculator.webapp.Login;
+package com.calculator.Login;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +12,7 @@ public class LoginController {
 
     @Autowired
     UserValidation uv;
+
 
     @GetMapping(value= "/login")
     public String loginPage(){

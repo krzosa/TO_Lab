@@ -82,5 +82,4 @@ public class Calc implements ICalc, Cloneable {
             return -1;
         }
     }
-
 }
