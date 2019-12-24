@@ -38,4 +38,5 @@ public class Facade implements IFacade, Cloneable {
     public double pow(double a, double power){
         return calculator.pow(a,power);
     }
+
 }

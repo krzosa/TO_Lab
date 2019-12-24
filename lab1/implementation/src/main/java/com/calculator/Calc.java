@@ -4,6 +4,7 @@ import java.io.File;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.Scanner;
 
 import static java.lang.System.exit;
 
@@ -13,10 +14,12 @@ public class Calc implements ICalc, Cloneable {
     Object invokeObject;
 
     public Calc(){
-        File file1 = new File("plugins/plugin/target/classes");
-        /* TODO Properties external file with urls */
+        File filePath = new File("externalPluginsPath.txt");
         try
         {
+            Scanner scanner = new Scanner(filePath);
+            File file1 = new File(scanner.nextLine());
+            scanner.close();
             //https://www.oracle.com/technical-resources/articles/java/javareflection.html
             //https://stackoverflow.com/questions/6219829/method-to-dynamically-load-java-class-files
             URL url = file1.toURI().toURL();
@@ -35,7 +38,7 @@ public class Calc implements ICalc, Cloneable {
         {
             System.out.println(e);
             exit(-1);
-            /* TODO note and throw the exceprtion */
+            /* TODO note and throw the exceprtion (????) */
         }
     }
 
@@ -77,6 +80,12 @@ public class Calc implements ICalc, Cloneable {
         {
             System.out.println(e);
             return -1;
+        }
+    }
+    @Override
+    public void mainLoop(){
+        while(1){
+            
         }
     }
 }

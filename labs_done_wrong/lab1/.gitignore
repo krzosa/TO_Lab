@@ -7,3 +7,10 @@
 
 # Build
 */target
+
+# VSCode
+.vscode/
+.project
+.settings
+.classpath
+
