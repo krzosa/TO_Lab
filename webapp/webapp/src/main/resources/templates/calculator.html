@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Title</title>
+    <title>CalcApp</title>
 </head>
 <body>
-    <form action="/calculator" method="post">
-        <label for="calc">Type in the operation:</label>
-        <input type="text" id="calc" name="calc" placeholder="1 + 2">
-        <input type="submit" value="calculate!">
-    </form>
+<form action="/calculator" method="post">
+    Type in your problem:<br/> <input type="text" name="calc" placeholder="1+2">
+    <input type="submit" value="calculate">
+</form>
 </body>
 </html>

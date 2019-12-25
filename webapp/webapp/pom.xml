@@ -12,7 +12,6 @@
 	<artifactId>webapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>webapp</name>
-	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -65,17 +64,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<resources>
-			<resource>
-				<directory>../interface/target/classes/</directory>
-			</resource>
-			<resource>
-				<directory>../implementation/target/classes/</directory>
-			</resource>
-			<resource>
-				<directory>../PluginLoader/target/classes/</directory>
-			</resource>
-		</resources>
+
 	</build>
 
 </project>
