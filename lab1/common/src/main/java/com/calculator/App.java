@@ -1,15 +1,18 @@
 package com.calculator;
 
+import java.util.Scanner;
+
 public class App
 {
     public static void main( String[] args )
     {
-        IFacade a = new Facade();
-        System.out.println(a.pow(4,2));
+        ICalc calc = new Calc();
+        Scanner scan = new Scanner(System.in);
 
-        /* TODO: Loop and stuff */
+        System.out.println("Type in a simple math problem ex. 1+2");
+        while(true){
+            String problem = scan.nextLine();
+            calc.calculate(problem);
+        }
     }
 }
-
-/* TODO Zastanowic sie jak wykorzystac ta apke jako api(Backend) i polaczyc ja z frontendem
-    pana sie pytalem to spring tutaj jest potrzebny */

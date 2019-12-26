@@ -42,17 +42,6 @@
 
             </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>../interface/target/classes/</directory>
-            </resource>
-            <resource>
-                <directory>../implementation/target/classes/</directory>
-            </resource>
-            <resource>
-                <directory>../PluginLoader/target/classes/</directory>
-            </resource>
-        </resources>
 
 
     </build>
