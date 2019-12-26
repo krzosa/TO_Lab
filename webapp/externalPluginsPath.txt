@@ -1,1 +1,1 @@
-../plugins/plugin/target/classes
+plugins/plugin/target/classes

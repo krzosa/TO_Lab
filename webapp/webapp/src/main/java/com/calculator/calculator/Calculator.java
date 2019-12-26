@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class Calculator {
 
     ICalc calcObj = new Calc();
+    int result;
 
     @GetMapping("/calculator")
     public String calculatorPage(){
@@ -19,8 +20,13 @@ public class Calculator {
     }
     @PostMapping("/calculator")
     public String calcApp(@RequestParam(name="problem", required=true) String problem, Model model){
-        int result = calcObj.calculate(problem);
         model.addAttribute("resultText", "Result of your problem: ");
+        try {
+            result = calcObj.calculate(problem);
+        }
+        catch(Exception e){
+            model.addAttribute("resultText", "invalid Entry!");
+        }
         model.addAttribute("result",result);
         return "calculator";
     }

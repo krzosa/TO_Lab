@@ -17,7 +17,9 @@ public class Calc implements ICalc, Cloneable {
     Object invokeObject;
 
     public Calc(){
-        File filePath = new File("../externalPluginsPath.txt");
+        File filePath = new File("externalPluginsPath.txt");
+        //Maven path, in file add ../
+//        File filePath = new File("../externalPluginsPath.txt");
         try
         {
             Scanner scanner = new Scanner(filePath);
