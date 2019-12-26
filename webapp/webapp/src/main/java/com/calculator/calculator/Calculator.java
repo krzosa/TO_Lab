@@ -8,10 +8,32 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
+
 @Controller
 public class Calculator {
 
-    ICalc calcObj = new Calc();
+    ICalc calcObj;
+
+    {
+        try {
+            calcObj = new Calc();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+    }
+
     int result;
 
     @GetMapping("/calculator")

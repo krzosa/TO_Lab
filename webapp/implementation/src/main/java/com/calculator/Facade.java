@@ -4,13 +4,23 @@ public class Facade implements IFacade, Cloneable {
 
     ICalc calculator;
     public Facade(){
-        calculator = new Calc();
+        try {
+            calculator = new Calc();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
     }
 
     @Override
     public Object clone() throws CloneNotSupportedException
     {
-        calculator = new Calc();    
+        try {
+            calculator = new Calc();
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
         return super.clone();
     }
 
@@ -34,9 +44,5 @@ public class Facade implements IFacade, Cloneable {
         return calculator.divide(a,b);
     }
 
-    @Override
-    public double pow(double a, double power){
-        return calculator.pow(a,power);
-    }
 
 }
