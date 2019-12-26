@@ -1,7 +1,10 @@
 package com.calculator;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
@@ -16,12 +19,10 @@ public class Calc implements ICalc, Cloneable {
     Method meth;
     Object invokeObject;
 
-    public Calc(){
+    public Calc() throws FileNotFoundException, ClassNotFoundException, MalformedURLException, IllegalAccessException, InstantiationException, NoSuchMethodException {
         File filePath = new File("externalPluginsPath.txt");
         //Maven path, in file add ../
 //        File filePath = new File("../externalPluginsPath.txt");
-        try
-        {
             Scanner scanner = new Scanner(filePath);
             File file1 = new File(scanner.nextLine());
             scanner.close();
@@ -37,13 +38,6 @@ public class Calc implements ICalc, Cloneable {
             partypes[1] = Double.TYPE;
             meth = cls.getMethod("pow", partypes);
             invokeObject = cls.newInstance();
-        }
-        catch (Exception e)
-        {
-            System.out.println(e);
-            exit(-1);
-            /* TODO note and throw the exceprtion (????) */
-        }
     }
 
     @Override
@@ -73,18 +67,11 @@ public class Calc implements ICalc, Cloneable {
     }
 
     @Override
-    public double pow(double x, double power){
-        try{
+    public double pow(double x, double power) throws InvocationTargetException, IllegalAccessException {
             Object arglist[] = new Object[2];
             arglist[0] = x;
             arglist[1] = power;
             return (double)meth.invoke(invokeObject, arglist);
-        }
-        catch (Exception e)
-        {
-            System.out.println(e);
-            return -1;
-        }
     }
     //we are taking a math problem in string. We divide it into sections with "+" "-" as separators
     // (operators saved are into a buffer)
