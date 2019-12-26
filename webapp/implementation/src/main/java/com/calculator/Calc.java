@@ -17,12 +17,13 @@ public class Calc implements ICalc, Cloneable {
     Object invokeObject;
 
     public Calc(){
-        File filePath = new File("externalPluginsPath.txt");
+//        File filePath = new File("externalPluginsPath.txt");
         try
         {
-            Scanner scanner = new Scanner(filePath);
-            File file1 = new File(scanner.nextLine());
-            scanner.close();
+//            Scanner scanner = new Scanner(filePath);
+//            File file1 = new File(scanner.nextLine());
+//            scanner.close();
+            File file1 = new File("D:\\Work\\TO\\02\\TO_Lab\\webapp\\plugins\\plugin\\target\\classes");
             //https://www.oracle.com/technical-resources/articles/java/javareflection.html
             //https://stackoverflow.com/questions/6219829/method-to-dynamically-load-java-class-files
             URL url = file1.toURI().toURL();
