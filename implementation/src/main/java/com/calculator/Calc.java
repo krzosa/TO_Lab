@@ -20,9 +20,9 @@ public class Calc implements ICalc, Cloneable {
     Object invokeObject;
 
     public Calc() throws FileNotFoundException, ClassNotFoundException, MalformedURLException, IllegalAccessException, InstantiationException, NoSuchMethodException {
-        File filePath = new File("externalPluginsPath.txt");
+//        File filePath = new File("externalPluginsPath.txt");
         //Maven path, in file add ../
-//        File filePath = new File("../externalPluginsPath.txt");
+        File filePath = new File("../externalPluginsPath.txt");
             Scanner scanner = new Scanner(filePath);
             File file1 = new File(scanner.nextLine());
             scanner.close();
