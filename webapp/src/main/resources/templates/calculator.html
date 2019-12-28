@@ -4,13 +4,21 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css"/>
     <title>CalcApp</title>
 </head>
 <body>
-<form action="/calculator" method="post">
-    Type in your problem:<br/> <input type="text" name="problem" placeholder="1+2">
-    <input type="submit" value="calculate">
-    <p th:text="${resultText}"/> <span th:text="${result}"/>
-</form>
+    <div class="vertical-center">
+        <div class="container">
+            <form action="/calculator" method="post" class="form-group">
+        <p class="display-2 fixed-top" th:text="${result}"/>
+                <label class="h3" for="problem" >Type in your problem:</label>
+                <input class="form-control" type="text" id="problem" name="problem" placeholder="1+2">
+                <input class="btn btn-primary" type="submit" value="CALCULATE">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
