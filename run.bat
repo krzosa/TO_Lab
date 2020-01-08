@@ -1,6 +1,6 @@
 @echo off
 call mvn clean install
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-pushd webapp
+cd webapp
 call mvnw spring-boot:run
-popd
+cd ..
