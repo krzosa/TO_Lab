@@ -1,7 +1,7 @@
 # Project for the Object Technologies class
 Calculator turned into a webapp with login page, action logging(to the 
 database) and layout created using Thymeleaf and Bootstrap.
-##Technologies
+## Technologies
 * Spring-Boot
     * Spring project that makes it very easy to create and manage a Spring application
 * Spring data JPA
@@ -14,7 +14,6 @@ database) and layout created using Thymeleaf and Bootstrap.
     additional functionality.
 * Bootstrap
     * CSS library that helps immensely in making nice, responsive layouts quickly. 
-    Looks very bootstrap-y though.
 ## A bit of history
 It first started as a parent maven project with 3 sub modules: common, interface, implementation. 
 Common is where main is so it's the starting point of the program. 
@@ -25,6 +24,7 @@ outside of the project which sadly brings a lot of file pathing problems.
 
 Then I used Spring framework to turn this application into a webapp(webapp module) which took me a 
 looooong time to figure out how to do. Lastly I added logging using Hibernate and H2 database.
+![layout](https://github.com/krzosa/project-for-object-technologies-class/blob/master/img.PNG)
 
 ## How to run(cmd):
 1. mvn clean install
