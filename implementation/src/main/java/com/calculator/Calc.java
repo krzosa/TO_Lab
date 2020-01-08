@@ -16,30 +16,6 @@ import static java.lang.System.exit;
 
 public class Calc implements ICalc, Cloneable {
 
-    Method meth;
-    Object invokeObject;
-
-    public Calc() throws FileNotFoundException, ClassNotFoundException, MalformedURLException, IllegalAccessException, InstantiationException, NoSuchMethodException {
-//        File filePath = new File("externalPluginsPath.txt");
-        //Maven path, in file add ../
-        File filePath = new File("../externalPluginsPath.txt");
-            Scanner scanner = new Scanner(filePath);
-            File file1 = new File(scanner.nextLine());
-            scanner.close();
-            System.out.println(file1.getAbsolutePath());
-            URL url = file1.toURI().toURL();
-            URL[] urls = new URL[]{url};
-            ClassLoader cl = new URLClassLoader(urls);
-            Class cls = cl.loadClass("Plugin");
-            Method[] a = cls.getDeclaredMethods();
-
-            Class partypes[] = new Class[2];
-            partypes[0] = Double.TYPE;
-            partypes[1] = Double.TYPE;
-            meth = cls.getMethod("pow", partypes);
-            invokeObject = cls.newInstance();
-    }
-
     @Override
     public Object clone() throws CloneNotSupportedException
     {
@@ -66,13 +42,7 @@ public class Calc implements ICalc, Cloneable {
         return a-b;
     }
 
-    @Override
-    public double pow(double x, double power) throws InvocationTargetException, IllegalAccessException {
-            Object arglist[] = new Object[2];
-            arglist[0] = x;
-            arglist[1] = power;
-            return (double)meth.invoke(invokeObject, arglist);
-    }
+
     //we are taking a math problem in string. We divide it into sections with "+" "-" as separators
     // (operators saved are into a buffer)
     //then we combine them from digits into numbers

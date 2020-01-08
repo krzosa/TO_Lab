@@ -1,26 +1,21 @@
 package com.calculator.calculator;
 
 import com.calculator.Calc;
-import com.calculator.Database.Logging.Entities.UserActionEntity;
-import com.calculator.Database.Logging.Repositories.UserActionSpringDataRepository;
+import com.calculator.UserAction.UserActionEntity;
+import com.calculator.UserAction.UserActionRepository;
 import com.calculator.ICalc;
 import com.calculator.Login.LoginController;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.io.FileNotFoundException;
-import java.net.MalformedURLException;
 
 @Controller
 public class Calculator {
 
     @Autowired
-    UserActionSpringDataRepository UARepo;
+    UserActionRepository UARepo;
 
     ICalc calcObj;
     {

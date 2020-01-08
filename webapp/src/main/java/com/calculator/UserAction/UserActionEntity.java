@@ -1,4 +1,4 @@
-package com.calculator.Database.Logging.Entities;
+package com.calculator.UserAction;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

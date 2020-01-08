@@ -1,1 +1,35 @@
 ../plugins/plugin/target/classes
+
+
+
+//    @Override
+//    public double pow(double x, double power) throws InvocationTargetException, IllegalAccessException {
+//            Object arglist[] = new Object[2];
+//            arglist[0] = x;
+//            arglist[1] = power;
+//            return (double)meth.invoke(invokeObject, arglist);
+//    }
+
+//    Method meth;
+//    Object invokeObject;
+
+//    public Calc() throws FileNotFoundException, ClassNotFoundException, MalformedURLException, IllegalAccessException, InstantiationException, NoSuchMethodException {
+//        File filePath = new File("externalPluginsPath.txt");
+        //Maven path, in file add ../
+//        File filePath = new File("/externalPluginsPath.txt");
+//            Scanner scanner = new Scanner(filePath);
+//            File file1 = new File(scanner.nextLine());
+//            scanner.close();
+//            System.out.println(file1.getAbsolutePath());
+//            URL url = file1.toURI().toURL();
+//            URL[] urls = new URL[]{url};
+//            ClassLoader cl = new URLClassLoader(urls);
+//            Class cls = cl.loadClass("Plugin");
+//            Method[] a = cls.getDeclaredMethods();
+//
+//            Class partypes[] = new Class[2];
+//            partypes[0] = Double.TYPE;
+//            partypes[1] = Double.TYPE;
+//            meth = cls.getMethod("pow", partypes);
+//            invokeObject = cls.newInstance();
+//    }
