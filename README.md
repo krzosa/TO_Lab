@@ -2,18 +2,13 @@
 Calculator turned into a webapp with login page, action logging(to the 
 database) and layout created using Thymeleaf and Bootstrap.
 ## Technologies
-* Spring-Boot
-    * Spring project that makes it very easy to create and manage a Spring application
-* Spring data JPA
-    * Spring project that among others provides JPA repositories which have many standard methods for
-    talking with the database(eliminates boilerplate code).
-* H2 Database
-    * Very convenient embedded in memory database. It's great for learning cause it's easy to setup.
-* Thymeleaf
-    * Template engine that makes it possible to use .html files instead of the .JSPs while providing 
-    additional functionality.
-* Bootstrap
-    * CSS library that helps immensely in making nice, responsive layouts quickly. 
+* [Spring-Boot](https://spring.io/projects/spring-boot)
+* [Spring MVC](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html)
+* [Spring data JPA](https://spring.io/projects/spring-data-jpa)
+* [H2 Database](https://en.wikipedia.org/wiki/H2_(DBMS))
+* [Bootstrap](https://getbootstrap.com/)
+* [Thymeleaf](https://www.thymeleaf.org/)
+
 ## A bit of history
 It first started as a parent maven project with 3 sub modules: common, interface, implementation. 
 Common is where main is so it's the starting point of the program. 
