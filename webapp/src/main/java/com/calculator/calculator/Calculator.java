@@ -19,20 +19,14 @@ public class Calculator {
 
     ICalc calcObj;
     {
-        try {
             calcObj = new Calc();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
-
-    int result;
-
     @PostMapping("/calculator")
     public String calcApp(@RequestParam(name="problem", required=true) String problem,
                           Model model){
         model.addAttribute("resultText", "Result of your problem: ");
         UARepo.save(new UserActionEntity(LoginController.LOGIN, problem));
+        int result = 0;
         try {
             result = calcObj.calculate(problem);
         }
