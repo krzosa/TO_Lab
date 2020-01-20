@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.calculator.Calc;
 @SpringBootTest
-class calcTests {
+class calcTest {
 
     @Test
     void testAddNumbers() {

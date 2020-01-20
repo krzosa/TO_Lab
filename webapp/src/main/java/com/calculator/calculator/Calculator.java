@@ -17,10 +17,7 @@ public class Calculator {
     @Autowired
     UserActionRepository UARepo;
 
-    ICalc calcObj;
-    {
-            calcObj = new Calc();
-    }
+    ICalc calcObj = new Calc();
     @PostMapping("/calculator")
     public String calcApp(@RequestParam(name="problem", required=true) String problem,
                           Model model){
