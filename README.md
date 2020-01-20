@@ -20,7 +20,7 @@ outside of the project which sadly brings a lot of file pathing problems.
 Then I used Spring framework to turn this application into a webapp(webapp module) which took me a 
 looooong time to figure out how to do. Lastly I added logging using Hibernate and H2 database.
 
-
+## Image
 ![layout](https://github.com/krzosa/project-for-object-technologies-class/blob/master/IMG.PNG)
 
 ## How to run(cmd):
